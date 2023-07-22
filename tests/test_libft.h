@@ -6,7 +6,7 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 20:32:59 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/20 20:34:28 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/21 20:57:21 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 # include "../libft.h"
 # include <ctype.h>
 # include <stdio.h>
+# include "minunit.h"
 
 #endif
