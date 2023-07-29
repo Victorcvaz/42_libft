@@ -12,7 +12,11 @@ SRCS = ft_isalnum.c \
 	ft_strlcat.c    \
 	ft_atoi.c       \
 	ft_strlcpy.c    \
-	ft_strnstr.c
+	ft_strnstr.c    \
+	ft_memset.c     \
+	ft_bzero.c      \
+	ft_memchr.c     \
+	ft_memcpy.c     
 
 OBJ_DIR = ./obj/
 OBJS = $(SRCS:.c=.o)

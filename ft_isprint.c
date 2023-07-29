@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:45:51 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/24 19:48:49 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/28 21:30:05 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 int	ft_isprint(int c)
 {
