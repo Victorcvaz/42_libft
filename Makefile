@@ -21,7 +21,8 @@ SRCS = ft_isalnum.c \
 	ft_memcmp.c     \
 	ft_strdup.c     \
 	ft_calloc.c     \
-	ft_substr.c      
+	ft_substr.c     \
+	ft_strjoin.c    
 
 OBJ_DIR = ./obj/
 OBJS = $(SRCS:.c=.o)

@@ -9,7 +9,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	dst_index = ft_strlen(dst);
 	src_index = 0;
-	while (src[src_index] != '\0' && (dst_index + src_index + 1) < size - 1)
+	while (src[src_index] != '\0' && (dst_index + src_index + 1) < size)
 	{
 		dst[dst_index + src_index] = src[src_index];
 		src_index++;

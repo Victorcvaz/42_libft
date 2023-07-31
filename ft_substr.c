@@ -14,9 +14,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (s_len - start < len)
 		len = s_len - start;
-	ptr = (char *) malloc(sizeof(char) * len + 1);
+	ptr = (char *) malloc(sizeof(char) * len + NULL_BYTE);
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, s + start, len + 1);
+	ft_strlcpy(ptr, s + start, len + NULL_BYTE);
 	return (ptr);
 }
