@@ -20,7 +20,8 @@ SRCS = ft_isalnum.c \
 	ft_memmove.c    \
 	ft_memcmp.c     \
 	ft_strdup.c     \
-	ft_calloc.c     
+	ft_calloc.c     \
+	ft_substr.c      
 
 OBJ_DIR = ./obj/
 OBJS = $(SRCS:.c=.o)
