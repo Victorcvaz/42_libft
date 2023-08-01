@@ -3,13 +3,6 @@
 
 int main()
 {
-	char **result;
-	result = ft_split("aomeuver, isso, pode, estar, certo, ?", ',');
-	printf("%s\n", result[0]);
-	printf("%s\n", result[1]);
-	printf("%s\n", result[2]);
-	printf("%s\n", result[3]);
-	printf("%s\n", result[4]);
-	printf("%s\n", result[5]);
+	printf("%s\n", ft_itoa(-100092));
 	return (0);
 }
