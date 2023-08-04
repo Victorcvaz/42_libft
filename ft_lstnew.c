@@ -1,6 +1,18 @@
-// lacking header.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/03 17:46:12 by vcesar-v          #+#    #+#             */
+/*   Updated: 2023/08/03 18:02:14 by vcesar-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
-
+t_list	*ft_lstnew(void *content)
+{
+	return (ft_lstnew(content, sizeof(content)));
+}

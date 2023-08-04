@@ -1,4 +1,14 @@
-// lacking header.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/03 17:46:38 by vcesar-v          #+#    #+#             */
+/*   Updated: 2023/08/03 18:48:32 by vcesar-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -8,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	if (dest > src)
 	{
-		while (--n)
+		while (n--)
 			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 	}
 	else

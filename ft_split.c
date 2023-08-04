@@ -1,99 +1,95 @@
-// lacking header.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/03 17:47:20 by vcesar-v          #+#    #+#             */
+/*   Updated: 2023/08/03 21:33:14 by vcesar-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 static	int		fill_result(char **result, char const *s, char c);
-static	char	*allocate_substring(char const *s, int sep_nbr, int last_index);
-static	void	free_result(char **result, int result_index);
-static	int		count_separators(char const *s, char c);
+static	void		free_result(char **result, int result_index);
+static	char		*allocate_substring(char const *s, int sep_nbr, int last_i);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		sep_nbr;
+	char	*s2;
+	size_t	sep_nbr;
+	int		i;
 
-	sep_nbr = count_separators(s, c);
-	if (!s)
+	i = -1;
+	sep_nbr = 0;
+	while (s[++i])
+	{
+		if (s[i] == c && s[i + 1])
+			sep_nbr++;
+	}
+	if (!s || !sep_nbr || sep_nbr == ft_strlen(s))
 		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (sep_nbr + 2));
 	if (!result)
 		return (NULL);
-	if (!sep_nbr)
-	{
-		result[0] = (char *)malloc(sizeof(char));
-		if (!result[0])
-		{
-			free(result);
-			return (NULL);
-		}
-		result[0][0] = '\0';
-		result[1] = NULL;
-	}
-	else
-		if (!fill_result(result, s, c))
-			return (NULL);
+	if (!fill_result(result, s, c))
+		return (NULL);
 	return (result);
 }
 
 static	int	fill_result(char **result, char const *s, char c)
 {
-	int	result_index;
-	int	last_index;
-	int	current_index;
+	int	res_i;
+	int	last_i;
+	int	curr_i;
 
-	result_index = -1;
-	last_index = -1;
-	current_index = 0;
-	while (s[++last_index])
+	res_i = -1;
+	last_i = -1;
+	curr_i = 0;
+	while (s[++last_i])
 	{
-		if (s[last_index] == c || s[last_index + 1] == '\0')
+		if (s[last_i + 1] == '\0' || s[last_i] == c)
 		{
-			result[++result_index] = allocate_substring(s, current_index, last_index);
-			if (!result[result_index])
+			while (s[last_i] == c && s[last_i] != '\0')
+				last_i++;
+			result[++res_i] = allocate_substring(s, curr_i, last_i);
+			if (!result[res_i])
 			{
-				free_result(result, result_index);
+				free_result(result, res_i);
 				return (0);
 			}
-			current_index = last_index + 1;
+			curr_i = last_i + 1;
 		}
 	}
 	return (1);
 }
 
-static char *allocate_substring(char const *s, int current_index, int last_index)
+static	char	*allocate_substring(char const *s, int curr_i, int last_i)
 {
+	char	*substring;
 	size_t	i;
-	char	*substring; 
 	size_t	substr_len;
-	
+
 	i = 0;
-	substr_len = last_index - current_index;
-	substring = (char *)malloc(sizeof(char) * (substr_len + NULL_BYTE));
+	substr_len = last_i - curr_i;
+	substring = (char *)malloc(sizeof(char) * (substr_len + 1));
 	if (!substring)
 		return (NULL);
 	while (i < substr_len)
-		substring[i++] = s[current_index++];
+		substring[i++] = s[curr_i++];
 	substring[substr_len] = '\0';
 	return (substring);
 }
 
-static void free_result(char **result, int result_index)
+static	void	free_result(char **result, int result_index)
 {
 	int	i;
-	
+
 	i = -1;
 	while (++i < result_index)
 		free(result[i]);
 	free(result);
-}
-
-static int count_separators(char const *s, char c)
-{
-	int count;
-
-	count = 0;
-	while (*s)
-		if (*s++ == c)
-			count++;
-	return (count);
 }
