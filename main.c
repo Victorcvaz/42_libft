@@ -1,18 +1,21 @@
-#include "libft.h"
+#include "./libft/libft.h"
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-	char **result;
-	char **result2;
-	char *str = "Hello,,World";
-	result = ft_split(str, ',');
-	printf("%s\n", result[0]);
-	printf("%s\n", result[1]);
-	printf("\n");
-	char *str2 = ",,,HelloWorld,";
-	result2 = ft_split(str2, ',');
-	// printf("%s\n", result2[0]);
-	// printf("%s\n", result2[1]);
-	return (0);
+    char const *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+    char c = ' ';
+    
+    char **result = ft_split(str, c);
+    if (result)
+    {
+        for (int i = 0; result[i] != NULL; i++)
+        {
+            printf("%s\n", result[i]);
+            free(result[i]);
+        }
+        free(result);
+    }
+    
+    return 0;
 }
