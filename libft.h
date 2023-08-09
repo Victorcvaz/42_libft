@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:54:34 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/08/03 17:54:35 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/08/08 17:36:49 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 char		*ft_itoa(int n);
 char		*ft_strdup(const char *s);
-char		*ft_strchr(const char *s, int c);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		**ft_split(char const *s, char c);
