@@ -6,14 +6,14 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:47:20 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/08/09 07:41:57 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/08/09 07:52:48 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static	int	fill_result(char **result, char const *s, char c, int matriz_i);
-static int	count_words(const char *str, char c);
+static	int	count_words(const char *str, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -68,7 +68,7 @@ static	int	fill_result(char **result, char const *s, char c, int matriz_i)
 	return (1);
 }
 
-static int	count_words(const char *s, char c)
+static	int	count_words(const char *s, char c)
 {
 	int		i;
 	int		trigger;
