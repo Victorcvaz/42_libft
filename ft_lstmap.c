@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 21:59:07 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/08/10 23:22:05 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/08/11 22:53:59 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 	t_list	*curr_node;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	new_node = NULL;
 	while (lst)
