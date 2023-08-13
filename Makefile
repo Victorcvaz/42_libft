@@ -69,10 +69,12 @@ bonus:
 	@make OBJS="$(OBJS_BONUS)" --no-print-directory
 
 clean:
-	rm -rf $(OBJ_DIR)
+	@echo "rm objs"
+	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "rm $(NAME)"
+	@rm -f $(NAME)
 
 re: fclean all
 
