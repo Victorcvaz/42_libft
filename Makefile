@@ -65,7 +65,7 @@ $(NAME): $(OBJ_DIR) $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 	@echo "$(NAME) created"
 
-bonus: 
+bonus:
 	@make OBJS="$(OBJS_BONUS)" --no-print-directory
 
 clean:
