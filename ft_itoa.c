@@ -3,72 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
+/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:46:02 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/08/11 00:12:30 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/08/16 11:34:45 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_nbrlen(int n);
-static void	strrev(char *str);
-static void	ft_itoa_aux(int n, char *result, int result_index);
 
 char	*ft_itoa(int n)
 {
+	long	ln;
 	char	*result;
 	int		result_index;
-	int		negative;
+	int		digit;
 
 	result = (char *)malloc(sizeof(char) * (ft_nbrlen(n) + 1));
 	if (!result)
 		return (NULL);
-	result_index = 0;
-	negative = n < 0;
-	if (negative)
-		result[result_index++] = '-';
-	ft_itoa_aux(n, result, result_index);
-	strrev(result + negative);
-	return (result);
-}
-
-static void	ft_itoa_aux(int n, char *result, int result_index)
-{
-	long	ln;
-	int		digit;
-
+	result_index = ft_nbrlen(n);
+	result[result_index] = '\0';
 	ln = (long) n;
+	if (n < 0)
+		result[0] = '-';
 	while (ln)
 	{
 		digit = ln % 10;
 		if (digit < 0)
 			digit *= -1;
-		result[result_index++] = digit + '0';
+		result[--result_index] = digit + '0';
 		ln /= 10;
 	}
-	if (!result_index)
-		result[result_index++] = '0';
-	result[result_index] = '\0';
-}
-
-static	void	strrev(char *str)
-{
-	char	temp;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = ft_strlen(str) - 1;
-	while (i < j)
-	{
-		temp = str[j];
-		str[j] = str[i];
-		str[i] = temp;
-		i++;
-		j--;
-	}
+	if (n == 0)
+		result[0] = '0';
+	return (result);
 }
 
 static int	ft_nbrlen(int n)
