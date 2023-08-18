@@ -6,7 +6,7 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:46:30 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/08/03 17:46:32 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/08/17 18:58:15 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*src_ptr;
 	size_t			index;
 
+	if (!dest && !src)
+		return (NULL);
 	dest_ptr = (unsigned char *)dest;
 	src_ptr = (unsigned char *)src;
 	index = 0;
