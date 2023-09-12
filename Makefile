@@ -48,16 +48,16 @@ SRCS_BONUS = ft_lstnew_bonus.c \
 	ft_lstiter_bonus.c         \
 	ft_lstmap_bonus.c          
 
-OBJ_DIR = ./obj_dir
-OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
-OBJS_BONUS = $(addprefix $(OBJ_DIR)/, $(SRCS_BONUS:.c=.o))
+OBJ_DIR = obj_dir/
+OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
+OBJS_BONUS = $(addprefix $(OBJ_DIR), $(SRCS_BONUS:.c=.o))
 
 all: $(NAME) $(OBJ_DIR)
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: %.c
+$(OBJ_DIR)%.o: %.c
 	@$(CC) $(FLAGS) -c $< -o $@
 	@echo "Object file created"
 
