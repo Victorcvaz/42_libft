@@ -42,7 +42,7 @@ bonus:
 
 clean:
 	@echo "rm objs"
-	@rm -rf $(OBJS)
+	@rm -rf $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	@echo "rm $(NAME)"
