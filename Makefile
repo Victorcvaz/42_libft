@@ -7,7 +7,7 @@ CHAR_SRCS = $(addprefix ./src/char/, ft_isalnum.c ft_isalpha.c ft_isascii.c ft_i
 	ft_tolower.c ft_toupper.c)
 
 MATH_SRCS = $(addprefix ./src/math/, ft_atoi.c ft_itoa.c ft_check_base_errors.c ft_calc_nbr_digits.c \
-	ft_itoa_base.c)
+	ft_itoa_base.c ft_atoi_base.c)
 
 MEMORY_SRCS = $(addprefix ./src/memory/, ft_memset.c ft_bzero.c ft_memchr.c ft_memcpy.c \
 	ft_memmove.c ft_memcmp.c ft_calloc.c)

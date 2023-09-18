@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:54:34 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/09/18 16:12:22 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/18 17:42:13 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 int			check_base_errors(char *base);
 int			ft_calc_nbr_digits(long int number, int base_len);
 char		*ft_itoa_base(long int number, char *base);
+int			ft_atoi_base(char *str, char *base);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
