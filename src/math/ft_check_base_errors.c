@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:23:48 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/09/18 17:26:44 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/19 11:01:50 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	check_base_errors(char *base)
 
 	index_i = 0;
 	base_len = ft_strlen(base);
+	if (base_len < 2)
+		return (1);
 	while (index_i < base_len)
 	{
 		if (base[index_i] == ' '

@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:54:34 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/09/18 17:42:13 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/19 10:34:48 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ typedef struct s_list
 }				t_list;
 
 void		ft_bzero(void *s, size_t n);
-void		ft_putnbr_fd(int n, int fd);
-void		ft_putstr_fd(char *s, int fd);
+ssize_t		ft_putnbr_fd(long int n, int fd);
+ssize_t		ft_putstr_fd(char *s, int fd);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		*ft_memset(void *s, int c, size_t n);
@@ -67,6 +67,7 @@ int			check_base_errors(char *base);
 int			ft_calc_nbr_digits(long int number, int base_len);
 char		*ft_itoa_base(long int number, char *base);
 int			ft_atoi_base(char *str, char *base);
+ssize_t		ft_putnbr_base(long int nbr, char *base, int fd);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);

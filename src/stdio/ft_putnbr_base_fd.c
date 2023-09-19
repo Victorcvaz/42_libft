@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 17:47:04 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/09/19 10:41:23 by victorcvaz       ###   ########.fr       */
+/*   Created: 2023/09/19 10:07:22 by victorcvaz        #+#    #+#             */
+/*   Updated: 2023/09/19 10:52:51 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-ssize_t	ft_putnbr_fd(long int n, int fd)
+ssize_t	ft_putnbr_base(long int nbr, char *base, int fd)
 {
-	char	*nbr;
+	char	*nbr_base;
 	ssize_t	bytes;
 
-	nbr = ft_itoa(n);
-	if (!nbr)
+	nbr_base = ft_itoa_base(nbr, base);
+	if (!nbr_base)
 		return (ft_putstr_fd(NULL, fd));
-	bytes = ft_putstr_fd(nbr, fd);
-	free(nbr);
+	bytes = ft_putstr_fd(nbr_base, fd);
+	free(nbr_base);
 	return (bytes);
 }
