@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
+/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 10:07:22 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/09/19 10:52:51 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/28 18:36:48 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-ssize_t	ft_putnbr_base(long int nbr, char *base, int fd)
+ssize_t	ft_putnbr_base_fd(long int nbr, char *base, int fd)
 {
 	char	*nbr_base;
 	ssize_t	bytes;
