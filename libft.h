@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:54:34 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/09/28 18:35:48 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/09/29 09:38:10 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);
-int			check_base_errors(char *base);
+int			ft_check_base_errors(char *base);
 int			ft_calc_nbr_digits(long int number, int base_len);
 char		*ft_itoa_base(long int number, char *base);
 int			ft_atoi_base(char *str, char *base);

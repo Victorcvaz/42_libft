@@ -6,13 +6,13 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:23:48 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/09/19 11:01:50 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/29 09:34:50 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int	check_base_errors(char *base)
+int	ft_check_base_errors(char *base)
 {
 	int	index_i;
 	int	index_j;

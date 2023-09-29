@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:21:41 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/09/18 17:20:19 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/29 09:34:23 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi_base(char *str, char *base)
 	nbr = 0;
 	sign = 1;
 	base_len = ft_strlen(base);
-	if (base_len < 2 || check_base_errors(base))
+	if (base_len < 2 || ft_check_base_errors(base))
 		return (nbr);
 	while (str[index] == ' ' || (str[index] >= '\t' && str[index] <= '\r'))
 		index++;

@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:13:08 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/09/19 11:03:45 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2023/09/29 09:35:08 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_itoa_base(long int number, char *base)
 	int		nbr_digits;
 	int		base_len;
 
-	if (check_base_errors(base))
+	if (ft_check_base_errors(base))
 		return (NULL);
 	base_len = ft_strlen(base);
 	nbr_digits = ft_calc_nbr_digits(number, base_len);

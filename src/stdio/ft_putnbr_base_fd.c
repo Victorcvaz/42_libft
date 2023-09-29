@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
+/*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 10:07:22 by victorcvaz        #+#    #+#             */
-/*   Updated: 2023/09/28 18:36:48 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/09/29 09:36:30 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ ssize_t	ft_putnbr_base_fd(long int nbr, char *base, int fd)
 	char	*nbr_base;
 	ssize_t	bytes;
 
+	if (ft_check_base_errors(base))
+		return (0);
 	nbr_base = ft_itoa_base(nbr, base);
 	if (!nbr_base)
 		return (ft_putstr_fd(NULL, fd));
