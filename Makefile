@@ -10,10 +10,10 @@ MATH_SRCS = $(addprefix ./src/math/, ft_atoi.c ft_itoa.c ft_check_base_errors.c 
 	ft_itoa_base.c ft_atoi_base.c)
 
 MEMORY_SRCS = $(addprefix ./src/memory/, ft_memset.c ft_bzero.c ft_memchr.c ft_memcpy.c \
-	ft_memmove.c ft_memcmp.c ft_calloc.c)
+	ft_memmove.c ft_memcmp.c ft_calloc.c ft_putptr.c)
 
 STDIO_SRCS = $(addprefix ./src/stdio/, ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-	ft_putnbr_fd.c ft_gnl.c ft_putnbr_base_fd.c)
+	ft_putnbr_fd.c ft_gnl.c ft_putnbr_base_fd.c ft_printf.c)
 
 STR_SRCS = $(addprefix ./src/str/, ft_strlcat.c ft_strlcpy.c ft_strnstr.c ft_strdup.c ft_strchr.c \
 	ft_strrchr.c ft_strncmp.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c \

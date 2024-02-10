@@ -6,7 +6,7 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:54:34 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/09/29 09:38:10 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2024/02/10 13:06:35 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,18 @@
 # define LIBFT_H
 # define NULL_BYTE 1
 # define LINE_BREAK 1
+# define STDOUT_FILENO 1
 # define FD_LIMITS 1024
+# define DECIMAL_BASE "0123456789"
+# define HEX_LOWER_BASE "0123456789abcdef"
+# define HEX_UPPER_BASE "0123456789ABCDEF"
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 4096
 # endif
 
 # include <stdlib.h>
+# include <stdarg.h>
 # include <unistd.h>
 
 typedef struct s_list
@@ -30,10 +35,11 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-void		ft_bzero(void *s, size_t n);
 ssize_t		ft_putnbr_fd(long int n, int fd);
 ssize_t		ft_putstr_fd(char *s, int fd);
 ssize_t		ft_putchar_fd(char c, int fd);
+ssize_t		ft_putnbr_base_fd(long int nbr, char *base, int fd);
+void		ft_bzero(void *s, size_t n);
 void		ft_putendl_fd(char *s, int fd);
 void		*ft_memset(void *s, int c, size_t n);
 void		*ft_calloc(size_t nmemb, size_t size);
@@ -67,17 +73,17 @@ int			ft_check_base_errors(char *base);
 int			ft_calc_nbr_digits(long int number, int base_len);
 char		*ft_itoa_base(long int number, char *base);
 int			ft_atoi_base(char *str, char *base);
-ssize_t		ft_putnbr_base_fd(long int nbr, char *base, int fd);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
-int			ft_isspace(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_isascii(int c);
 int			ft_isprint(int c);
 int			ft_lstsize(t_list *lst);
 int			ft_atoi(const char *nptr);
+int			ft_printf(const char *str, ...);
+int			ft_putptr(unsigned long nbr, char *base);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 
