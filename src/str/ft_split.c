@@ -6,14 +6,11 @@
 /*   By: victorcvaz <victorcvaz@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:47:20 by vcesar-v          #+#    #+#             */
-/*   Updated: 2024/02/11 04:36:41 by victorcvaz       ###   ########.fr       */
+/*   Updated: 2024/02/11 04:47:43 by victorcvaz       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
-
-static	int	ft_fill_result(char **result, char const *s, char c, int matriz_i);
-static	int	ft_count_words(const char *str, char c);
 
 static size_t	count_words(char const *s, char c)
 {
